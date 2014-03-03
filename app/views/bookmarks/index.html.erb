@@ -1,0 +1,36 @@
+<div class="container">
+
+	<div class="jumbotron">
+		<h1>Manage your bookmarks</h1>
+		<p class="lead">Here you can create, edit and delete your favorite bookmarks.</p>
+		<%= link_to 'Add new bookmark', new_bookmark_path, :class => "btn btn-primary btn-large" %>
+	</div>
+	
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>Title</th>
+	      <th>Url</th>
+	      <th>Date Created</th>
+	      <th>Date Updated</th>
+	      <th></th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <% @bookmarks.each do |bookmark| %>
+	      <tr>
+	        <td><%= bookmark.title %></td>
+	        <td><%= bookmark.url %></td>
+	        <td><%= bookmark.created_at.to_date %></td>		
+	        <td><%= bookmark.updated_at.to_date %></td>		
+	        <td><%= link_to 'View', bookmark, :class => "label label-default" %></td>
+	        <td><%= link_to 'Edit', edit_bookmark_path(bookmark), :class => "label label-warning" %></td>
+	        <td><%= link_to 'Delete', bookmark, :class => "label label-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+
+</div>
