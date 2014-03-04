@@ -3,7 +3,9 @@
 	<div class="jumbotron">
 		<h1>Manage your bookmarks</h1>
 		<p class="lead">Here you can create, edit and delete your favorite bookmarks.</p>
-		<%= link_to 'Add new bookmark', new_bookmark_path, :class => "btn btn-primary btn-large" %>
+		<%= link_to new_bookmark_path, :class => 'btn btn-danger btn-large' do %>
+		    Add new bookmark  <span class="glyphicon glyphicon-star-empty"></span>
+		<% end %>
 	</div>
 	
 	<table class="table table-striped">
