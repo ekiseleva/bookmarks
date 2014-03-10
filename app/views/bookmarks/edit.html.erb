@@ -1,0 +1,11 @@
+<div class="container">
+	
+	<h1 class="text-center">Edit <%= @bookmark.title %></h1>
+
+<%= render 'form' %>
+
+<div class="text-center">
+	<%= link_to 'View', @bookmark %> |
+	<%= link_to 'Back', bookmarks_path %>
+</div>
+</div>
