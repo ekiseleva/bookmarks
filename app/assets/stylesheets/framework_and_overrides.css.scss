@@ -86,7 +86,7 @@ section {
     color: #333;
     text-align: center;
 	background:#fff;
-    background: #fff url(bg.svg) repeat;
+    background: #fff image-url("bg.svg") repeat;
 	background-size: cover;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
