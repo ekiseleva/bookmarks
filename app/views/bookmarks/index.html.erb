@@ -23,7 +23,7 @@
 	  <tbody>
 	    <% @bookmarks.each do |bookmark| %>
 	      <tr>
-	        <td><%= bookmark.title %></td>
+	        <td><%= bookmark.name %></td>
 	        <td><%= bookmark.url %></td>
 	        <td><%= bookmark.created_at.to_date %></td>		
 	        <td><%= bookmark.updated_at.to_date %></td>		
